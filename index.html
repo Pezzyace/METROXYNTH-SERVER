@@ -24,28 +24,32 @@
   <title>METROXYNTH INU</title>
 </head>
 <body class="font-['Montserrat] bg-gray-900 box-border">
-  <nav class="flex w-10/12 m-auto justify-between items-center h-[8rem]">
-    <div class="flex items-center gap-3">
+  <nav class="flex w-10/12 m-auto justify-between items-center h-[8rem] relative">
+    <div class="logo flex items-center gap-3">
       <img src="images/xVmnSiMo_400x400.png" alt="" class="w-[40px]">
       <p class="text-green-400 text-[25px] font-semibold tracking-tighter">METROXYNTH INU</p>
     </div>
-    <div class="flex gap-8 items-center">
-      <ul class="flex gap-6">
-        <li class="text-white cursor-pointer text-[15px] hover:underline">Home</li>
+    <div class="nav flex gap-8 items-center" id="nav">
+      <ul class="flex gap-6 nav-items">
+        <li class="text-white cursor-pointer text-[15px] hover:underline"><a href="index.html">Home</a></li>
         <li class="text-white cursor-pointer text-[15px] hover:underline"><a href="#toke">Token</a></li>
         <li class="text-white cursor-pointer text-[15px] hover:underline"><a href="#faqs">FAQS</a></li>
       </ul>
       <button class="bg-green-400 text-white px-4 py-2 border border-solid border-transparent text-[15px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400" id="connect-btn">Connect Wallet</button>
     </div>
+    <div class="hidden nav-btn">
+      <img src="images/icon-hamburger.svg" alt="" class="cursor-pointer" id="open-nav-btn">
+      <img src="images/icon-close.svg" alt="" class="hidden cursor-pointer" id="close-nav-btn">
+    </div>
   </nav>
 
   <main class="w-10/12 m-auto pb-24">
-    <section class="grid grid-cols-2 gap-12 items-center mb-28 mt-12">
+    <section class="grid grid-cols-2 gap-12 items-center mb-28 mt-12 hero">
       <div class="">
-        <h2 class="text-white text-[40px] leading-1 font-semibold mb-2">Bridging Made Easy via Layer Zero</h2>
-        <p class="text-white text-[18px] mb-8">Trade elegantly, deposit with best rewards and experience the speed and security powered by METROXYNTH</p>
+        <h2 class="text-white text-[40px] leading-1 font-semibold mb-2 hero-head">Bridging Made Easy via Layer Zero</h2>
+        <p class="text-white text-[18px] mb-8 hero-head">Trade elegantly, deposit with best rewards and experience the speed and security powered by METROXYNTH</p>
   
-        <div class="border border-solid rounded-2xl border-green-400 p-6 mb-8 w-8/12 shadow shadow-green-200">
+        <div class="border border-solid rounded-2xl border-green-400 p-6 mb-8 w-8/12 shadow shadow-green-200 hero-pointers">
           <div class="flex items-center gap-2">
             <img src="images/eth.png" alt="" class="w-[20px] rounded-full">
             <p class="text-white text-[15px] hover:text-green-400">Ethereum Contract:</p>
@@ -59,7 +63,7 @@
         <div class="absolute bg-green-400 opacity-[50%] z-[10] right-0 w-[500px] h-[500px] rounded-full blur-[10px] backdrop-blur-[10px]"></div>
 
   
-        <div class="flex gap-4 items-center border border-solid rounded-2xl border-green-400 p-6 mb-8 w-8/12 shadow shadow-green-200">
+        <div class="flex gap-4 items-center border border-solid rounded-2xl border-green-400 p-6 mb-8 w-8/12 shadow shadow-green-200 hero-pointers">
           <img width="60" height="80" src="https://img.icons8.com/dotty/80/4ade80/paper.png" alt="paper"/>
           <div class="">
             <h2 class="text-white text-[18px] hover:text-green-400">White paper</h2>
@@ -67,14 +71,14 @@
           </div>
         </div>
   
-        <div class="flex gap-4 border border-solid rounded-2xl border-green-400 p-6 mb-8 w-8/12 shadow shadow-green-200">
+        <div class="flex gap-4 border border-solid rounded-2xl border-green-400 p-6 mb-8 w-8/12 shadow shadow-green-200 hero-pointers">
           <img src="images/telegram-plane-svgrepo-com.svg" alt="" width="40">
           <img src="images/icons8-twitterx.svg" alt="" width="40">
         </div>
       </div>
 
       <div class="flex flex-col items-center">
-        <div class="border border-green-400 border-solid p-4 mb-4">
+        <div class="border border-green-400 border-solid p-4 mb-4 timer">
           <p class="text-center text-green-400 mb-4 text-[20px] font-semibold">Days till launch</p>
           <div class="flex px-4 justify-center gap-4">
             <div class="border border-solid border-green-400 rounded p-4">
@@ -115,7 +119,7 @@
       </div>
     </section>
   
-    <section class="grid grid-cols-3 gap-[6] w-10/12 m-auto pb-32">
+    <section class="grid grid-cols-3 gap-[6] w-10/12 m-auto pb-32 balance">
       <div class="flex flex-col items-center justify-center">
         <h2 class="text-green-400 text-[40px] font-semibold text-center tracking-wide mb-3">410M</h2>
         <small class="text-white text-[15px] text-center">Supply</small>
@@ -130,7 +134,7 @@
       </div>
     </section>
   
-    <section class="grid grid-cols-3 gap-6 mb-24">
+    <section class="grid grid-cols-3 gap-6 mb-24 info">
       <div class="border border-solid border-green-400 rounded-2xl p-6 flex flex-col justify-center items-center">
         <img width="80" height="80" class="mb-2" src="https://img.icons8.com/ios-filled/100/4ade80/nui2.png" alt="click-icon"/>
         <h2 class="text-[25px] mb-6 text-center text-white hover:text-green-400">Trade with Simple One Click</h2>
@@ -148,13 +152,13 @@
       </div>
     </section>
   
-    <section class="flex flex-col items-center justify-center mb-40">
+    <section class="flex flex-col items-center justify-center mb-40 prada">
       <h2 class="text-[25px] mb-6 text-center text-white font-semibold">Built for the public good</h2>
       <p class="text-white text-[15px] text-center mb-12">METROXYNTH is more than just a blockchain. It's an experiment in sustainable ecosystem funding fueled by protocol revenue. Retroactive Public Goods Funding is simple: you build for the public good, you get paid.</p>
       <img src="images/banner.png" alt="">
     </section>
   
-    <section class="grid grid-cols-2 gap-12 items-center mb-24">
+    <section class="grid grid-cols-2 gap-12 items-center mb-24 prada">
       <img src="images/intro1.png" alt="">
       <div class="">
         <h2 class="text-white text-[25px] mb-4 font-semibold">Many chains. One platform.</h2>
@@ -163,7 +167,7 @@
       </div>
     </section>
   
-    <section class="grid grid-cols-2 gap-12 items-center mb-24">
+    <section class="grid grid-cols-2 gap-12 items-center mb-24 prada">
       <div class="">
         <h2 class="text-white text-[25px] mb-4 font-semibold">That’s proudly a public good.</h2>
         <p class="text-white text-[15px]">The METROXYNTH is fully Open Source public good. Revenues generated by METROXYNTH Mainnet, and eventually the Superchain, are used to fund the public goods which enable it.<br>
@@ -173,7 +177,7 @@
       <img src="images/intro2.png" alt="">
     </section>
   
-    <section class="grid grid-cols-2 gap-12 items-center mb-24" id="toke">
+    <section class="grid grid-cols-2 gap-12 items-center mb-24 prada" id="toke">
       <img src="images/intro3.png" alt="">
       <div class="">
         <h2 class="text-[25px] text-white mb-4 font-semibold">METROXYNTH Tokenomics and Distribution</h2>
@@ -216,7 +220,7 @@
       </div>
     </section>
   
-    <section class="w-10/12 m-auto pd-24" id="faqs">
+    <section class="w-10/12 m-auto pd-24 faqs" id="faqs">
       <h2 class="text-[25px] font-semibold text-white mb-6 text-center">FAQS</h2>
       <div class="grid gap-8">
         <div class="flex gap-2 rounded border-solid border-green-400 border p-4 cursor-pointer faq">
@@ -264,7 +268,7 @@
   </main>
   
 
-  <footer class="w-10/12 m-auto border-t border-t-green-400 p-6 flex items-center justify-between">
+  <footer class="w-10/12 m-auto border-t border-t-green-400 p-6 flex items-center justify-between footer">
     <div class="flex items-center gap-3">
       <img src="images/xVmnSiMo_400x400.png" alt="" class="w-[40px]">
       <p class="text-green-400 text-[20px] font-semibold tracking-tighter">METROXYNTH INU</p>
@@ -276,8 +280,68 @@
     </div>
   </footer>
 
+
+  <style>
+    @media(width <= 768px){
+      .nav{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        right: 0px;
+        top: 70px;
+        position: absolute;
+        background: rgb(17, 24, 39);
+        width: 100%;
+        padding: 20px 0;
+        border: 2px solid #4ade80;
+        border-radius: 10px;
+      }
+      .nav-items{
+        display: flex;
+        flex-direction: column;
+      }
+      .nav-btn{
+        display: flex;
+      }
+      .hero{
+        display: flex;
+        flex-direction: column;
+      }
+      .hero-head{
+        text-align: center;
+      }
+      .hero-pointers{
+        width: 100%;
+      }
+      .timer{
+        border: none;
+      }
+      .balance{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+      .info{
+        display: flex;
+        flex-direction: column;
+      }
+      .prada{
+        display: flex;
+        flex-direction: column;
+      }
+      .faqs{
+        width: 100%;
+      }
+      .footer{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+  </style>
+
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script src="script.js"></script>
+  <script src="src/script.js"></script>
 </body>
 </html>

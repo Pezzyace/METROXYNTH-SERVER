@@ -6,9 +6,6 @@ const minus = document.querySelector('.plus');
 faqs.forEach(faq => {
     faq.addEventListener('click', () => {
         faq.classList.toggle('open');
-        
-        plus.style.display = 'none';
-        minus.style.display = 'block';
     })
 })
 
@@ -47,3 +44,22 @@ setInterval(updateTimer, 1000);
 
 // Initial call to update the timer
 updateTimer();
+
+const openNav = document.getElementById('open-nav-btn');
+const closeNav = document.getElementById('close-nav-btn');
+const nav = document.getElementById('nav');
+
+openNav.addEventListener("click", () => {
+  nav.style.display = "flex";
+  closeNav.style.display = "inline-block";
+  openNav.style.display = "none";
+})
+
+closeNav.addEventListener("click", () => {
+  nav.style.display = "none";
+  closeNav.style.display = "none";
+  openNav.style.display = "inline-block";
+})
+nav.addEventListener("click", () => {
+  nav.style.display = "none";
+})

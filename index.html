@@ -18,48 +18,50 @@
   <!-- TAILWIND SCRIPT TAG -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- STYLES LINK -->
+  <link rel="stylesheet" href="styles/styles.css">
+
   <title>METROXYNTH INU</title>
 </head>
 <body class="font-['Montserrat] bg-gray-900 box-border">
   <nav class="flex w-10/12 m-auto justify-between items-center h-[6rem]">
     <div class="flex items-center gap-3">
       <img src="images/xVmnSiMo_400x400.png" alt="" class="w-[40px]">
-      <p class="text-green-400 text-[20px] font-semibold tracking-tighter">METROXYNTH INU</p>
+      <p class="text-green-400 text-[25px] font-semibold tracking-tighter">METROXYNTH INU</p>
     </div>
     <div class="flex gap-8 items-center">
       <ul class="flex gap-6">
-        <li class="text-white cursor-pointer text-[15px] hover:underline" id="#">Home</li>
-        <li class="text-white cursor-pointer text-[15px] hover:underline" id="#">Token</li>
-        <li class="text-white cursor-pointer text-[15px] hover:underline" id="#">Roadmap</li>
-        <li class="text-white cursor-pointer text-[15px] hover:underline" id="#">FAQS</li>
+        <li class="text-white cursor-pointer text-[15px] hover:underline">Home</li>
+        <li class="text-white cursor-pointer text-[15px] hover:underline"><a href="#toke">Token</a></li>
+        <li class="text-white cursor-pointer text-[15px] hover:underline"><a href="#faqs">FAQS</a></li>
         <li class="text-white cursor-pointer text-[15px] hover:underline" id="#">Test Swap</li>
       </ul>
-      <button class="bg-green-400 text-white px-4 py-2 text-[15px] rounded-full" id="connect-btn">Connect Wallet</button>
+      <button class="bg-green-400 text-white px-4 py-2 border border-solid border-transparent text-[15px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400" id="connect-btn">Connect Wallet</button>
     </div>
   </nav>
 
-  <main class="w-10/12 m-auto">
-    <section class="grid grid-cols-2 gap-12items-center mb-12">
+  <main class="w-10/12 m-auto pb-24">
+    <section class="grid grid-cols-2 gap-12 items-center mb-28 mt-12">
       <div class="">
-        <h2 class="text-white text-[30px] font-semibold mb-2">Bridging Made Easy via Layer Zero</h2>
-        <p class="text-white text-[13px] mb-8">Trade elegantly, deposit with best rewards and experience the speed and security powered by METROXYNTH</p>
+        <h2 class="text-white text-[40px] leading-1 font-semibold mb-2">Bridging Made Easy via Layer Zero</h2>
+        <p class="text-white text-[18px] mb-8">Trade elegantly, deposit with best rewards and experience the speed and security powered by METROXYNTH</p>
   
         <div class="border border-solid rounded-2xl border-green-400 p-6 mb-8 w-8/12 shadow shadow-green-200">
           <div class="flex items-center gap-2">
             <img src="images/eth.png" alt="" class="w-[20px] rounded-full">
-            <p class="text-white text-[15px]">Ethereum Contract:</p>
+            <p class="text-white text-[15px] hover:text-green-400">Ethereum Contract:</p>
           </div>
           <div class="flex gap-3">
-            <p class="text-white text-[15px]">0x0135234684654638496464646354</p>
-            <img src="images/copy-svgrepo-com.svg" alt="" class="w-[15px]">
+            <p class="text-white text-[15px] hover:text-green-400" id="contact-address">0x0135234684654638496464646354</p>
+            <img src="images/copy-svgrepo-com.svg" alt="" class="w-[15px] cursor-pointer" id="copy-icon">
           </div>
         </div>
   
         <div class="flex gap-4 items-center border border-solid rounded-2xl border-green-400 p-6 mb-8 w-8/12 shadow shadow-green-200">
           <img width="60" height="80" src="https://img.icons8.com/dotty/80/4ade80/paper.png" alt="paper"/>
           <div class="">
-            <h2 class="text-white text-[15px]">White paper</h2>
-            <p class="text-white text-[12px]">METROXYNTH is a Web3 platform that is secure...</p>
+            <h2 class="text-white text-[18px] hover:text-green-400">White paper</h2>
+            <p class="text-white text-[15px] hover:text-green-400">METROXYNTH is a Web3 platform that is secure...</p>
           </div>
         </div>
   
@@ -68,39 +70,79 @@
           <img src="images/icons8-twitterx.svg" alt="" width="40">
         </div>
       </div>
-      <div class=""></div>
+
+      <div class="flex flex-col items-center">
+        <div class="border border-green-400 border-solid p-4 mb-4">
+          <p class="text-center text-green-400 mb-4 text-[20px] font-semibold">Days till launch</p>
+          <div class="flex px-4 justify-center gap-4">
+            <div class="border border-solid border-green-400 rounded p-4">
+              <div class="flex flex-col items-center">
+                <div id="days-card"></div>
+                <div class="text-[40px] text-green-400 font-semibold" id="days">00</div>
+                <div id="days-card"></div>
+              </div>
+              <div class="text-green-400 text-center">Days</div>
+            </div>
+            <div class="border border-solid border-green-400 rounded p-4">
+              <div class="flex flex-col items-center">
+                <div id="hours-card"></div>
+                <div class="text-[40px] text-green-400 font-semibold" id="hours">00</div>
+                <div id="days-card"></div>
+              </div>
+              <div class="text-green-400 text-center">Hours</div>
+            </div>
+            <div class="border border-solid border-green-400 rounded p-4">
+              <div class="flex flex-col items-center">
+                <div id="minutes-card"></div>
+                <div class="text-[40px] text-green-400 font-semibold" id="minutes">00</div>
+                <div id="days-card"></div>
+              </div>
+              <div class="text-green-400 text-center">Minutes</div>
+            </div>
+            <div class="border border-solid border-green-400 rounded p-4">
+              <div class="flex flex-col items-center">
+                <div id="seconds-card"></div>
+                <div class="text-[40px] text-green-400 font-semibold" id="seconds">00</div>
+                <div id="days-card"></div>
+              </div>
+              <div class="text-green-400 text-center">Seconds</div>
+            </div>
+          </div>
+        </div>
+        <button class="bg-green-400 text-white px-4 py-2 border border-solid border-transparent text-[15px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400 ">How to Buy</button>
+      </div>
     </section>
   
-    <section class="grid grid-cols-3 gap-[6] w-10/12 m-auto pb-16">
+    <section class="grid grid-cols-3 gap-[6] w-10/12 m-auto pb-32">
       <div class="flex flex-col items-center justify-center">
-        <h2 class="text-green-400 text-[30px] font-semibold text-center tracking-wide mb-3">410M</h2>
-        <small class="text-white text-[12px] text-center">Supply</small>
+        <h2 class="text-green-400 text-[40px] font-semibold text-center tracking-wide mb-3">410M</h2>
+        <small class="text-white text-[15px] text-center">Supply</small>
       </div>
       <div class="flex flex-col items-center justify-center">
-        <h2 class="text-green-400 text-[30px] font-semibold text-center leading-2 mb-3">~30M</h2>
-        <small class="text-white text-[12px] text-center">Supply marketcap at listing (circulating)</small>
+        <h2 class="text-green-400 text-[40px] font-semibold text-center leading-2 mb-3">~30M</h2>
+        <small class="text-white text-[15px] text-center">Supply marketcap at listing (circulating)</small>
       </div>
       <div class="flex flex-col items-center justify-center">
-        <h2 class="text-green-400 text-[30px] font-semibold text-center leading-2"mb-3>30,000+</h2>
-        <small class="text-white text-[12px] text-center">Users on the waiting list</small>
+        <h2 class="text-green-400 text-[40px] font-semibold text-center leading-2"mb-3>30,000+</h2>
+        <small class="text-white text-[15px] text-center">Users on the waiting list</small>
       </div>
     </section>
   
     <section class="grid grid-cols-3 gap-6 mb-24">
       <div class="border border-solid border-green-400 rounded-2xl p-6 flex flex-col justify-center items-center">
         <img width="80" height="80" class="mb-2" src="https://img.icons8.com/ios-filled/100/4ade80/nui2.png" alt="click-icon"/>
-        <h2 class="text-[25px] mb-6 text-center text-white">Trade with Simple One Click</h2>
-        <p class="text-white text-[15px] text-center">Multiple assets, slippage control, we are making a DEX for everyone to use.</p>
+        <h2 class="text-[25px] mb-6 text-center text-white hover:text-green-400">Trade with Simple One Click</h2>
+        <p class="text-white text-[18px] text-center hover:text-green-400">Multiple assets, slippage control, we are making a DEX for everyone to use.</p>
       </div>
       <div class="border border-solid border-green-400 rounded-2xl p-6 flex flex-col justify-center items-center">
         <img width="80" height="80" class="mb-2" src="https://img.icons8.com/glyph-neue/64/4ade80/golden-fever.png" alt="mining-icon"/>
-        <h2 class="text-[20px] mb-6 text-center text-white">Best Mining Reward in METROXYNTH</h2>
-        <p class="text-white text-[15px] text-center">We provide the max liquidity reward with additional incentive boost back to the liquidity and token holders.</p>
+        <h2 class="text-[25px] mb-6 text-center text-white hover:text-green-400">Best Mining Reward in METROXYNTH</h2>
+        <p class="text-white text-[18px] text-center hover:text-green-400">We provide the max liquidity reward with additional incentive boost back to the liquidity and token holders.</p>
       </div>
       <div class="border border-solid border-green-400 rounded-2xl p-6 flex flex-col justify-center items-center">
         <img width="80" height="80" class="mb-2" src="https://img.icons8.com/ios-filled/100/4ade80/facebook-like.png" alt="trust icon"/>
-        <h2 class="text-[25px] mb-6 text-center text-white">Trusted by Ecosystems</h2>
-        <p class="text-white text-[15px] text-center">We are making connections with wallets, aggregators and other protocols to make the ecosystem better.</p>
+        <h2 class="text-[25px] mb-6 text-center text-white hover:text-green-400">Trusted by Ecosystems</h2>
+        <p class="text-white text-[15px] text-center hover:text-green-400">We are making connections with wallets, aggregators and other protocols to make the ecosystem better.</p>
       </div>
     </section>
   
@@ -129,10 +171,11 @@
       <img src="images/intro2.png" alt="">
     </section>
   
-    <section class="grid grid-cols-2 gap-12 items-center mb-24">
+    <section class="grid grid-cols-2 gap-12 items-center mb-24" id="toke">
       <img src="images/intro3.png" alt="">
       <div class="">
-        <p class="text-white text-[13px]">
+        <h2 class="text-[25px] text-white mb-4 font-semibold">METROXYNTH Tokenomics and Distribution</h2>
+        <p class="text-white text-[15px]">
           Retroactive Public Goods Funding: 22% <br>
           Ecosystem Fund: 19% <br>
           Core contributors: 17% <br>
@@ -144,67 +187,74 @@
       </div>
     </section>
   
-    <section class="">
+    <section class="mb-24">
       <h2 class="text-[25px] font-semibold text-white mb-6">Join the force with a good team</h2>
-      <div class="flex gap-4 justify-center items-center border border-solid rounded-2xl border-green-400 p-6 mb-8 shadow shadow-green-200">
+      <div class="flex gap-4 justify-around items-center border border-solid rounded-2xl border-green-400 p-6 mb-8 shadow shadow-green-200">
         <div class="">
           <div class="flex flex-col items-center">
-            <img src="images/xVmnSiMo_400x400.png" alt="" class="w-[60px] rounded-full border-solid border-green-400 border-px mb-6">
-            <p class="text-green-400 font-15px mb-4">Owenu</p>
+            <img src="images/xVmnSiMo_400x400.png" alt="" class="w-[60px] rounded-full border-solid border-green-400 border mb-6 p-2">
+            <p class="text-green-400 font-15px">Owenu</p>
             <p class="text-white">(CEO)</p>
           </div>
         </div>
         <div class="">
-          <div class="">
-            <img src="" alt="">
-            <p>Owenu</p>
-            <p>(CEO)</p>
+          <div class="flex flex-col items-center">
+            <img src="images/xVmnSiMo_400x400.png" alt="" class="w-[60px] rounded-full border-solid border-green-400 border mb-6 p-2">
+            <p class="text-green-400 font-15px">Owenu</p>
+            <p class="text-white">(CEO)</p>
+          </div>
+        </div>
+        <div class="">
+          <div class="flex flex-col items-center">
+            <img src="images/xVmnSiMo_400x400.png" alt="" class="w-[60px] rounded-full border-solid border-green-400 border mb-6 p-2">
+            <p class="text-green-400 font-15px">Owenu</p>
+            <p class="text-white">(CEO)</p>
           </div>
         </div>
       </div>
     </section>
   
-    <section class="">
-      <h2>FAQS</h2>
-      <div class="">
-        <div class="">
-          <ion-icon name="add-outline"></ion-icon>
-          <ion-icon name="remove-outline"></ion-icon>
-          <div class="">
-            <h3>What makes METROXYNTH different?</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, tempore?</p>
+    <section class="w-10/12 m-auto pd-24" id="faqs">
+      <h2 class="text-[25px] font-semibold text-white mb-6 text-center">FAQS</h2>
+      <div class="grid gap-8">
+        <div class="flex gap-2 rounded border-solid border-green-400 border p-4 cursor-pointer faq">
+          <ion-icon name="add-outline" class="text-[15px] text-green-400 plus"></ion-icon>
+          <ion-icon name="remove-outline" class="hidden text-[15px] text-green-400 minus"></ion-icon>
+          <div>
+            <h3 class="text-green-400 text-[15px]">What makes METROXYNTH different?</h3>
+            <p class="text-white hidden mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, tempore?</p>
           </div>
         </div>
-        <div class="">
-          <ion-icon name="add-outline"></ion-icon>
-          <ion-icon name="remove-outline"></ion-icon>
-          <div class="">
-            <h3>Why should i buy METROXYNTH</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, tempore?</p>
+        <div class="flex gap-2 rounded border-solid border-green-400 border p-4 cursor-pointer faq">
+          <ion-icon name="add-outline" class="text-[15px] text-green-400 plus"></ion-icon>
+          <ion-icon name="remove-outline" class="hidden text-[15px] text-green-400 minus"></ion-icon>
+          <div>
+            <h3 class="text-green-400 text-[15px]">Why should i buy METROXYNTH</h3>
+            <p class="text-white hidden mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, tempore?</p>
           </div>
         </div>
-        <div class="">
-          <ion-icon name="add-outline"></ion-icon>
-          <ion-icon name="remove-outline"></ion-icon>
-          <div class="">
-            <h3>How long is the Presale?/h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, tempore?</p>
+        <div class="flex gap-2 rounded border-solid border-green-400 border p-4 cursor-pointer faq">
+          <ion-icon name="add-outline" class="text-[15px] text-green-400 plus"></ion-icon>
+          <ion-icon name="remove-outline" class="hidden text-[15px] text-green-400 minus"></ion-icon>
+          <div>
+            <h3 class="text-green-400 text-[15px]">How long is the Presale?</h3>
+            <p class="text-white hidden mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, tempore?</p>
           </div>
         </div>
-        <div class="">
-          <ion-icon name="add-outline"></ion-icon>
-          <ion-icon name="remove-outline"></ion-icon>
-          <div class="">
-            <h3>Does the Presale have a waiting preiod?/h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, tempore?</p>
+        <div class="flex gap-2 rounded border-solid border-green-400 border p-4 cursor-pointer faq">
+          <ion-icon name="add-outline" class="text-[15px] text-green-400 plus"></ion-icon>
+          <ion-icon name="remove-outline" class="hidden text-[15px] text-green-400 minus"></ion-icon>
+          <div>
+            <h3 class="text-green-400 text-[15px]">Does the Presale have a waiting preiod?</h3>
+            <p class="text-white hidden mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, tempore?</p>
           </div>
         </div>
-        <div class="">
-          <ion-icon name="add-outline"></ion-icon>
-          <ion-icon name="remove-outline"></ion-icon>
-          <div class="">
-            <h3>When will the token launch?/h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, tempore?</p>
+        <div class="flex gap-2 rounded border-solid border-green-400 border p-4 cursor-pointer faq">
+          <ion-icon name="add-outline" class="text-[15px] text-green-400 plus"></ion-icon>
+          <ion-icon name="remove-outline" class="hidden text-[15px] text-green-400 minus"></ion-icon>
+          <div>
+            <h3 class="text-green-400 text-[15px]">When will the token launch?</h3>
+            <p class="text-white hidden mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, tempore?</p>
           </div>
         </div>
       </div>
@@ -212,15 +262,15 @@
   </main>
   
 
-  <footer>
-    <div class="logo-wrapper">
-      <img src="" alt="">
-      <p>METROXYNTH INU</p>
+  <footer class="w-10/12 m-auto border-t border-t-green-400 p-6 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <img src="images/xVmnSiMo_400x400.png" alt="" class="w-[40px]">
+      <p class="text-green-400 text-[20px] font-semibold tracking-tighter">METROXYNTH INU</p>
     </div>
-    <p>Copyright &copy 2023 METROXYNTH INU. All right Reserved.</p>
-    <div class="">
-      <img src="images/telegram-plane-svgrepo-com.svg" alt="">
-      <img src="images/icons8-twitterx.svg" alt="">
+    <p class="text-green-400 ">Copyright &copy 2023 METROXYNTH INU. All right Reserved.</p>
+    <div class="flex gap-2">
+      <img src="images/telegram-plane-svgrepo-com.svg" alt="" class="w-[30px]">
+      <img src="images/icons8-twitterx.svg" alt="" class="w-[30px]">
     </div>
   </footer>
 

@@ -25,9 +25,11 @@
 </head>
 <body class="font-['Montserrat] bg-gray-900 box-border">
   <nav class="flex w-10/12 m-auto justify-between items-center h-[8rem] relative">
-    <div class="logo flex items-center gap-3">
-      <img src="images/xVmnSiMo_400x400.png" alt="" class="w-[40px]">
-      <p class="text-green-400 text-[25px] font-semibold tracking-tighter">METROXYNTH SOL</p>
+    <div class="">
+      <a href="index.html" class="logo flex items-center gap-3 cursor-pointer">
+        <img src="images/xVmnSiMo_400x400.png" alt="" class="w-[40px]">
+        <p class="text-green-400 text-[25px] font-semibold tracking-tighter">METROXYNTH SOL</p>
+      </a>
     </div>
     <div class="nav flex gap-8 items-center" id="nav">
       <ul class="flex gap-6 nav-items">
@@ -54,9 +56,10 @@
             <img src="images/icons8-solana.svg" alt="" class="w-[20px] rounded-full">
             <p class="text-white text-[15px] hover:text-green-400">Solana Contract:</p>
           </div>
-          <div class="flex gap-3">
-            <p class="text-white text-[15px] hover:text-green-400" id="contact-address">0x0135234684654638496464646354</p>
-            <img src="images/copy-svgrepo-com.svg" alt="" class="w-[15px] cursor-pointer" id="copy-icon">
+          <div class="flex gap-3 relative">
+            <p class="text-white text-[15px] hover:text-green-400" id="address">0x0135234684654638496464646354</p>
+            <p class="absolute text-green-400 right-[10px] hidden" id="tooltipText">Copied!</p>
+            <img src="images/copy-svgrepo-com.svg" alt="" class="w-[15px] cursor-pointer" id="copyButton">
           </div>
         </div>
 
@@ -78,7 +81,11 @@
       </div>
 
       <div class="flex flex-col items-center">
-        <div class="border border-green-400 border-solid p-4 mb-4 timer">
+        <p class="text-white text-[20px] mb-6">Buy in before the price increases</p>
+        <div class="mb-6">
+          <p class="text-white text-[20px]">Current Price: <span class="">0.0000000005</span></p>
+        </div>
+        <div class="border border-green-400 border-solid p-4 mb-8 timer">
           <p class="text-center text-green-400 mb-4 text-[20px] font-semibold">Days till launch</p>
           <div class="flex px-4 justify-center gap-4">
             <div class="border border-solid border-green-400 rounded p-4">
@@ -115,7 +122,10 @@
             </div>
           </div>
         </div>
-        <button class="bg-green-400 text-white relative z-[50] px-4 py-2 border border-solid border-transparent text-[15px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400 "><a href="how-to-buy.html">How to Buy</a></button>
+        <div class="flex gap-6 items-center justify-center">
+          <button class="bg-green-400 text-white relative z-[50] px-4 py-2 border border-solid border-transparent text-[15px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400 "><a href="how-to-buy.html">How to Buy</a></button>
+          <button class="bg-green-400 text-white relative z-[50] px-4 py-2 border border-solid border-transparent text-[15px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400 "><a href="how-to-buy.html">Connect Wallet</a></button>
+        </div>
       </div>
     </section>
   

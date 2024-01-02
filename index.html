@@ -58,7 +58,7 @@
           </div>
           <div class="flex gap-3 relative">
             <p class="text-white text-[15px] hover:text-green-400" id="address">0x0135234684654638496464646354</p>
-            <p class="absolute text-green-400 right-[10px] hidden" id="tooltipText">Copied!</p>
+            <p class="absolute text-green-400 right-[10px] hidden tooltip" id="tooltipText">Copied!</p>
             <img src="images/copy-svgrepo-com.svg" alt="" class="w-[15px] cursor-pointer" id="copyButton">
           </div>
         </div>
@@ -66,7 +66,7 @@
         <div class="absolute bg-green-400 opacity-[50%] z-[10] right-0 w-[500px] h-[500px] rounded-full blur-[10px] backdrop-blur-[10px]"></div>
 
   
-        <div class="flex gap-4 items-center border border-solid rounded-2xl border-green-400 p-6 mb-8 w-8/12 shadow shadow-green-200 hero-pointers">
+        <div class="flex gap-4 items-center border border-solid rounded-2xl border-green-400 p-6 mb-8 w-8/12 shadow shadow-green-200 relative z-50 hero-pointers">
           <img width="60" height="80" src="https://img.icons8.com/dotty/80/4ade80/paper.png" alt="paper"/>
           <div class="">
             <h2 class="text-white text-[18px] hover:text-green-400">White paper</h2>
@@ -74,14 +74,18 @@
           </div>
         </div>
   
-        <div class="flex gap-4 border border-solid rounded-2xl border-green-400 p-6 mb-8 w-8/12 shadow shadow-green-200 hero-pointers">
-          <img src="images/telegram-plane-svgrepo-com.svg" alt="" width="40">
-          <img src="images/icons8-twitterx.svg" alt="" width="40">
+        <div class="flex gap-4 border border-solid rounded-2xl border-green-400 p-6 mb-8 w-8/12 shadow shadow-green-200 relative z-50 hero-pointers">
+          <a href="https://t.me/metroxynthsol">
+            <img src="images/telegram-plane-svgrepo-com.svg" alt="" width="40">
+          </a>
+          <a href="https://x.com/Metroxynth_sol?t=QPGvT3JsB_OFQsk5Ya6GwQ&s=09">
+            <img src="images/icons8-twitterx.svg" alt="" width="40">
+          </a>
         </div>
       </div>
 
       <div class="flex flex-col items-center">
-        <p class="text-white text-[20px] mb-6">Buy in before the price increases</p>
+        <p class="text-white text-[20px] uppercase mb-6">Buy in before the price increases</p>
         <div class="mb-6">
           <p class="text-white text-[20px]">Current Price: <span class="">0.0000000005</span></p>
         </div>
@@ -161,7 +165,7 @@
         <p class="text-white text-[15px] text-center hover:text-green-400">We are making connections with wallets, aggregators and other protocols to make the ecosystem better.</p>
       </div>
     </section>
-  
+<!--   
     <section class="flex flex-col items-center justify-center mb-40 prada">
       <h2 class="text-[25px] mb-6 text-center text-white font-semibold">Built for the public good</h2>
       <p class="text-white text-[15px] text-center mb-12">METROXYNTH is more than just a blockchain. It's an experiment in sustainable ecosystem funding fueled by protocol revenue. Retroactive Public Goods Funding is simple: you build for the public good, you get paid.</p>
@@ -186,7 +190,7 @@
       </div>
       <img src="images/intro2.png" alt="">
     </section>
-  
+   -->
     <section class="grid grid-cols-2 gap-12 items-center mb-24 prada" id="toke">
       <img src="images/intro3.png" alt="">
       <div class="">
@@ -202,7 +206,7 @@
         </p>
       </div>
     </section>
-  
+<!--   
     <section class="mb-24">
       <h2 class="text-[25px] font-semibold text-white mb-6">Join the force with a good team</h2>
       <div class="flex gap-4 justify-around items-center border border-solid rounded-2xl border-green-400 p-6 mb-8 shadow shadow-green-200">
@@ -229,7 +233,7 @@
         </div>
       </div>
     </section>
-  
+   -->
     <section class="w-10/12 m-auto pd-24 faqs" id="faqs">
       <h2 class="text-[25px] font-semibold text-white mb-6 text-center">FAQS</h2>
       <div class="grid gap-8">
@@ -238,7 +242,7 @@
           <ion-icon name="remove-outline" class="hidden text-[15px] text-green-400 minus"></ion-icon>
           <div>
             <h3 class="text-green-400 text-[15px]">What makes METROXYNTH different?</h3>
-            <p class="text-white hidden mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, tempore?</p>
+            <p class="text-white hidden mt-2">METROXYNTH stands out by blending a neon-lit flow approach with the potential for groundbreaking evolution</p>
           </div>
         </div>
         <div class="flex gap-2 rounded border-solid border-green-400 border p-4 cursor-pointer faq">
@@ -246,7 +250,7 @@
           <ion-icon name="remove-outline" class="hidden text-[15px] text-green-400 minus"></ion-icon>
           <div>
             <h3 class="text-green-400 text-[15px]">Why should i buy METROXYNTH</h3>
-            <p class="text-white hidden mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, tempore?</p>
+            <p class="text-white hidden mt-2">Because METROXYNTH is a brand new public chain, with the potential to increase by more than tens of thousands of times.</p>
           </div>
         </div>
         <div class="flex gap-2 rounded border-solid border-green-400 border p-4 cursor-pointer faq">
@@ -254,7 +258,7 @@
           <ion-icon name="remove-outline" class="hidden text-[15px] text-green-400 minus"></ion-icon>
           <div>
             <h3 class="text-green-400 text-[15px]">How long is the Presale?</h3>
-            <p class="text-white hidden mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, tempore?</p>
+            <p class="text-white hidden mt-2">The Presale will be open until the hard cap is reached.</p>
           </div>
         </div>
         <div class="flex gap-2 rounded border-solid border-green-400 border p-4 cursor-pointer faq">
@@ -262,7 +266,7 @@
           <ion-icon name="remove-outline" class="hidden text-[15px] text-green-400 minus"></ion-icon>
           <div>
             <h3 class="text-green-400 text-[15px]">Does the Presale have a waiting preiod?</h3>
-            <p class="text-white hidden mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, tempore?</p>
+            <p class="text-white hidden mt-2">There is no vesting period for METROXYNTH.</p>
           </div>
         </div>
         <div class="flex gap-2 rounded border-solid border-green-400 border p-4 cursor-pointer faq">
@@ -270,7 +274,7 @@
           <ion-icon name="remove-outline" class="hidden text-[15px] text-green-400 minus"></ion-icon>
           <div>
             <h3 class="text-green-400 text-[15px]">When will the token launch?</h3>
-            <p class="text-white hidden mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, tempore?</p>
+            <p class="text-white hidden mt-2">We will launch METROXYNTH within days of the presale ending. We will keep everyone informed of launch day through our website and social media outlets.?</p>
           </div>
         </div>
       </div>
@@ -281,12 +285,16 @@
   <footer class="w-10/12 m-auto border-t border-t-green-400 p-6 flex items-center justify-between footer">
     <div class="flex items-center gap-3">
       <img src="images/xVmnSiMo_400x400.png" alt="" class="w-[40px]">
-      <p class="text-green-400 text-[20px] font-semibold tracking-tighter">METROXYNTH INU</p>
+      <p class="text-green-400 text-[20px] font-semibold tracking-tighter">METROXYNTH SOL</p>
     </div>
-    <p class="text-green-400 ">Copyright &copy 2023 METROXYNTH INU. All right Reserved.</p>
+    <p class="text-green-400 ">Copyright &copy 2023 METROXYNTH SOL. All right Reserved.</p>
     <div class="flex gap-2">
-      <img src="images/telegram-plane-svgrepo-com.svg" alt="" class="w-[30px]">
-      <img src="images/icons8-twitterx.svg" alt="" class="w-[30px]">
+      <a href="https://t.me/metroxynthsol">
+        <img src="images/telegram-plane-svgrepo-com.svg" alt="" class="w-[30px]">
+      </a>
+      <a href="https://x.com/Metroxynth_sol?t=QPGvT3JsB_OFQsk5Ya6GwQ&s=09">
+        <img src="images/icons8-twitterx.svg" alt="" class="w-[30px]">
+      </a>
     </div>
   </footer>
 
@@ -338,6 +346,9 @@
       .prada{
         display: flex;
         flex-direction: column;
+      }
+      .tooltip{
+        top: -20px;
       }
       .faqs{
         width: 100%;

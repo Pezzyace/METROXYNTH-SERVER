@@ -84,53 +84,103 @@
         </div>
       </div>
 
-      <div class="flex flex-col items-center">
-        <p class="text-white text-[20px] uppercase mb-6">Buy in before the price increases</p>
-        <div class="mb-6">
-          <p class="text-white text-[20px]">Current Price: <span class="">0.0000000005</span></p>
-        </div>
-        <div class="border border-green-400 border-solid p-4 mb-8 timer">
-          <p class="text-center text-green-400 mb-4 text-[20px] font-semibold">Days till launch</p>
-          <div class="flex px-4 justify-center gap-4">
-            <div class="border border-solid border-green-400 rounded p-4">
-              <div class="flex flex-col items-center">
-                <div id="days-card"></div>
-                <div class="text-[40px] text-green-400 font-semibold" id="days">00</div>
-                <div id="days-card"></div>
+      <!-- DEX CALCULATOR -->
+
+      <div class="flex flex-col items-center w-full">
+        <div class="w-10/12 m-auto p-8 rounded-t-2xl bg-slate-800">
+          <p class="text-white text-[20px] text-center uppercase font-bold">Buy in before the price increases!</p>
+
+          <!-- TIMER CONTAINER -->
+          <div class="p-2 mb-4 timer">
+            <div class="flex px-4 justify-between gap-4">
+              <div class="rounded p-2">
+                <div class="flex flex-col items-center">
+                  <div id="days-card"></div>
+                  <div class="text-[20px] text-green-400 font-semibold" id="days">00</div>
+                  <div id="days-card"></div>
+                </div>
+                <div class="text-green-400 text-center">Days</div>
               </div>
-              <div class="text-green-400 text-center">Days</div>
-            </div>
-            <div class="border border-solid border-green-400 rounded p-4">
-              <div class="flex flex-col items-center">
-                <div id="hours-card"></div>
-                <div class="text-[40px] text-green-400 font-semibold" id="hours">00</div>
-                <div id="days-card"></div>
+              <div class="rounded p-2">
+                <div class="flex flex-col items-center">
+                  <div id="hours-card"></div>
+                  <div class="text-[20px] text-green-400 font-semibold" id="hours">00</div>
+                  <div id="days-card"></div>
+                </div>
+                <div class="text-green-400 text-center">Hours</div>
               </div>
-              <div class="text-green-400 text-center">Hours</div>
-            </div>
-            <div class="border border-solid border-green-400 rounded p-4">
-              <div class="flex flex-col items-center">
-                <div id="minutes-card"></div>
-                <div class="text-[40px] text-green-400 font-semibold" id="minutes">00</div>
-                <div id="days-card"></div>
+              <div class="rounded p-2">
+                <div class="flex flex-col items-center">
+                  <div id="minutes-card"></div>
+                  <div class="text-[20px] text-green-400 font-semibold" id="minutes">00</div>
+                  <div id="days-card"></div>
+                </div>
+                <div class="text-green-400 text-center">Minutes</div>
               </div>
-              <div class="text-green-400 text-center">Minutes</div>
-            </div>
-            <div class="border border-solid border-green-400 rounded p-4">
-              <div class="flex flex-col items-center">
-                <div id="seconds-card"></div>
-                <div class="text-[40px] text-green-400 font-semibold" id="seconds">00</div>
-                <div id="days-card"></div>
+              <div class="rounded p-2">
+                <div class="flex flex-col items-center">
+                  <div id="seconds-card"></div>
+                  <div class="text-[20px] text-green-400 font-semibold" id="seconds">00</div>
+                  <div id="days-card"></div>
+                </div>
+                <div class="text-green-400 text-center">Seconds</div>
               </div>
-              <div class="text-green-400 text-center">Seconds</div>
             </div>
           </div>
+
+          <!-- TIMER CONTAINER ENDS -->
+
+          <div class="flex justify-between">
+            <p class="text-white text-[13px]">Current Price: <span class="">$0.0000000005</span></p>
+            <p class="text-white text-[13px]">Next Price: <span class="">$0.00000005</span></p>
+          </div>
         </div>
-        <div class="flex gap-6 items-center justify-center">
-          <button class="bg-green-400 text-white relative z-[50] px-4 py-2 border border-solid border-transparent text-[15px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400 "><a href="how-to-buy.html">How to Buy</a></button>
-          <button class="bg-green-400 text-white relative z-[50] px-4 py-2 border border-solid border-transparent text-[15px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400 "><a href="how-to-buy.html">Connect Wallet</a></button>
+
+        <!-- BOTTOM CONTAINER -->
+        <div class="p-8 w-10/12 m-auto rounded-b-3xl relative z-50 bg-gray-700">
+          <div class="flex gap-6 mb-8">
+            <div class="flex gap-2 items-center bg-green-400 py-2 px-16 rounded-full cursor-pointer">
+              <img width="25" height="25" src="https://img.icons8.com/nolan/64/solana.png" alt="SOL"/>
+              <p class="text-white text-[16px]">SOL</p>
+            </div>
+            <div class="flex gap-2 items-center bg-green-400 py-2 px-16 rounded-full cursor-pointer">
+              <img width="25" height="25" src="https://img.icons8.com/color/48/000000/tether--v2.png" alt="USDT" class=""/>
+              <p class="text-white text-[16px]">USDT</p>
+            </div>
+          </div>
+          <div class="">
+            <p class="text-white mb-4">You Pay</p>
+            <div class="flex w-full items-center mb-6 bg-slate-900 rounded-full">
+              <input type="number" placeholder="0" class="w-10/12 py-4 px-6 rounded-l-full text-[15px] bg-transparent">
+              <span class="flex items-center">
+                <p class="text-white">SOL</p>
+                <img src="images/icons8-solana.svg" alt="" class="w-[25px]">
+              </span>
+            </div>
+          </div>
+          <div class="mb-6">
+            <p class="text-white mb-4">You receive</p>
+            <div class="flex w-full items-center mb-6 bg-slate-900 rounded-full">
+              <input type="number" placeholder="0" class="w-10/12 py-4 px-6 rounded-l-full text-[15px] bg-transparent">
+              <span class="flex items-center">
+                <p class="text-white">MTH</p>
+                <img src="images/xVmnSiMo_400x400.png" alt="" class="w-[25px]">
+              </span>
+            </div>
+          </div>
+          <button class="bg-green-400 text-white relative z-[50] px-4 py-2 border border-solid border-transparent text-[20px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400 w-full mb-8" id="">Connect Wallet</button>
+          <div class="flex gap-6 items-center justify-center mb-4">
+            <button class="bg-green-400 text-white relative z-[50] px-4 py-2 border border-solid border-transparent text-[20px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400 w-full"><a href="how-to-buy.html">How to Buy</a></button>
+            <button class="bg-green-400 text-white relative z-[50] px-4 py-2 border border-solid border-transparent text-[20px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400 w-full"><a href="how-to-buy.html">Refer and Earn</a></button>
+          </div>
         </div>
       </div>
+
+      <!-- DEX CALCULATRO ENDS -->
+
+      <!-- REFER AND EARN MODAL -->
+      <div class=""></div>
+      <!-- REFER AND EARN MODAL ENDS -->
     </section>
   
     <section class="grid grid-cols-3 gap-[6] w-10/12 m-auto pb-32 balance">

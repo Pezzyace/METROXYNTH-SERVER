@@ -86,8 +86,8 @@
 
       <!-- DEX CALCULATOR -->
 
-      <div class="flex flex-col items-center w-full">
-        <div class="w-10/12 m-auto p-8 rounded-t-2xl bg-slate-800">
+      <div class="flex flex-col items-center w-full calculator">
+        <div class="w-10/12 m-auto p-8 rounded-t-2xl bg-slate-800 z-50 calculator">
           <p class="text-white text-[20px] text-center uppercase font-bold">Buy in before the price increases!</p>
 
           <!-- TIMER CONTAINER -->
@@ -131,27 +131,27 @@
           <!-- TIMER CONTAINER ENDS -->
 
           <div class="flex justify-between">
-            <p class="text-white text-[13px]">Current Price: <span class="">$0.0000000005</span></p>
-            <p class="text-white text-[13px]">Next Price: <span class="">$0.00000005</span></p>
+            <p class="text-white text-[13px] price">Current Price: <span class="">$0.0000000005</span></p>
+            <p class="text-white text-[13px] price">Next Price: <span class="">$0.00000005</span></p>
           </div>
         </div>
 
         <!-- BOTTOM CONTAINER -->
-        <div class="p-8 w-10/12 m-auto rounded-b-3xl relative z-50 bg-gray-700">
+        <div class="p-8 w-10/12 m-auto rounded-b-3xl relative z-50 bg-gray-700 calculator">
           <div class="flex gap-6 mb-8">
-            <div class="flex gap-2 items-center bg-green-400 py-2 px-16 rounded-full cursor-pointer">
+            <div class="flex gap-2 items-center bg-green-400 py-2 px-8 rounded-full cursor-pointer">
               <img width="25" height="25" src="https://img.icons8.com/nolan/64/solana.png" alt="SOL"/>
               <p class="text-white text-[16px]">SOL</p>
             </div>
-            <div class="flex gap-2 items-center bg-green-400 py-2 px-16 rounded-full cursor-pointer">
+            <div class="flex gap-2 items-center bg-green-400 py-2 px-8 rounded-full cursor-pointer">
               <img width="25" height="25" src="https://img.icons8.com/color/48/000000/tether--v2.png" alt="USDT" class=""/>
               <p class="text-white text-[16px]">USDT</p>
             </div>
           </div>
           <div class="">
             <p class="text-white mb-4">You Pay</p>
-            <div class="flex w-full items-center mb-6 bg-slate-900 rounded-full">
-              <input type="number" placeholder="0" class="appearance-none w-10/12 py-4 px-6 rounded-l-full text-[15px] bg-transparent text-white outline-none ">
+            <div class="flex w-full items-center mb-6 p-4 bg-slate-900 rounded-full">
+              <input type="number" placeholder="0" class="appearance-none w-10/12 rounded-l-full text-[15px] bg-transparent text-white outline-none input ">
               <span class="flex items-center">
                 <p class="text-white">SOL</p>
                 <img src="images/icons8-solana.svg" alt="" class="w-[25px]">
@@ -160,8 +160,8 @@
           </div>
           <div class="mb-6">
             <p class="text-white mb-4">You receive</p>
-            <div class="flex w-full items-center mb-6 bg-slate-900 rounded-full">
-              <input type="number" placeholder="0" class="w-10/12 py-4 px-6 rounded-l-full text-[15px] bg-transparent text-white outline-none" disabled>
+            <div class="flex w-full items-center mb-6 p-4 bg-slate-900 rounded-full">
+              <input type="number" placeholder="0" class="w-10/12 rounded-l-full text-[15px] bg-transparent text-white outline-none input" disabled>
               <span class="flex items-center">
                 <p class="text-white">MXHS</p>
                 <img src="images/xVmnSiMo_400x400.png" alt="" class="w-[25px]">
@@ -171,8 +171,8 @@
           <button class="bg-green-400 text-white relative z-[50] px-4 py-2 border border-solid border-transparent text-[20px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400 w-full" id="">Connect Wallet</button>
           <p class="mb-8 text-green-400 ml-6 italic">Please open in Dapps browser</p>
           <div class="flex gap-6 items-center justify-center mb-4">
-            <button class="bg-green-400 text-white relative z-[50] px-4 py-2 border border-solid border-transparent text-[20px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400 w-full"><a href="how-to-buy.html">How to Buy</a></button>
-            <button class="bg-green-400 text-white relative z-[50] px-4 py-2 border border-solid border-transparent text-[20px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400 w-full" id="openModal">Refer and Earn</button>
+            <button class="bg-green-400 text-white relative z-[50] px-4 py-2 border border-solid border-transparent text-[20px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400 w-full calc-btn"><a href="how-to-buy.html">How to Buy</a></button>
+            <button class="bg-green-400 text-white relative z-[50] px-4 py-2 border border-solid border-transparent text-[20px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400 w-full calc-btn" id="openModal">Refer and Earn</button>
           </div>
         </div>
       </div>
@@ -182,7 +182,7 @@
 
     <!-- REFER AND EARN MODAL -->
     <div class="fixed w-full h-full top-0 right-0 left-0 bottom-0 flex items-center justify-center bg-[#00000040] z-[100] hidden" id="modal">
-      <div class="bg-slate-800 w-5/12 p-8 rounded-3xl border border-solid border-solid slate-400">
+      <div class="bg-slate-800 w-5/12 p-8 rounded-3xl border border-solid border-solid modal">
         <h2 class="text-white mb-8 font-600 uppercase text-center text-[20px]">Referral and Earn</h2>
         <p class="text-white text-[17px] mb-6">
           Copy your referral link below and send it to your friends. For every purchase made using this link, you'll receive 5% of the purchase amount.
@@ -339,7 +339,7 @@
           <ion-icon name="remove-outline" class="hidden text-[15px] text-green-400 minus"></ion-icon>
           <div>
             <h3 class="text-green-400 text-[15px]">When will the token launch?</h3>
-            <p class="text-white hidden mt-2">We will launch METROXYNTH within days of the presale ending. We will keep everyone informed of launch day through our website and social media outlets.?</p>
+            <p class="text-white hidden mt-2">We will launch METROXYNTH within days of the presale ending. We will keep everyone informed of launch day through our website and social media outlets.</p>
           </div>
         </div>
       </div>
@@ -404,6 +404,22 @@
       }
       .hero-pointers{
         width: 100%;
+      }
+      .calculator{
+        width: 100%;
+      }
+      .calc-btn{
+        font-size: 13px;
+      }
+      .modal{
+        width: 85%;
+        margin: 0 auto;
+      }
+      .price{
+        font-size: 10px;
+      }
+      .input{
+        width: 90%
       }
       .timer{
         border: none;

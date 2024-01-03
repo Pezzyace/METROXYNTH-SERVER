@@ -144,3 +144,15 @@ copyButton.addEventListener('click', () => {
         tooltipText.style.display = 'none';
     }, 1000);
 });
+
+
+const openModal = document.getElementById("openModal");
+const closeModal = document.getElementById("closeModal");
+const modal = document.getElementById("modal");
+
+openModal.addEventListener('click', () => {
+  modal.style.display = "flex";
+});
+closeModal.addEventListener('click', () => {
+  modal.style.display = "none";
+});

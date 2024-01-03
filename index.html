@@ -151,7 +151,7 @@
           <div class="">
             <p class="text-white mb-4">You Pay</p>
             <div class="flex w-full items-center mb-6 bg-slate-900 rounded-full">
-              <input type="number" placeholder="0" class="w-10/12 py-4 px-6 rounded-l-full text-[15px] bg-transparent">
+              <input type="number" placeholder="0" class="appearance-none w-10/12 py-4 px-6 rounded-l-full text-[15px] bg-transparent text-white outline-none ">
               <span class="flex items-center">
                 <p class="text-white">SOL</p>
                 <img src="images/icons8-solana.svg" alt="" class="w-[25px]">
@@ -161,27 +161,42 @@
           <div class="mb-6">
             <p class="text-white mb-4">You receive</p>
             <div class="flex w-full items-center mb-6 bg-slate-900 rounded-full">
-              <input type="number" placeholder="0" class="w-10/12 py-4 px-6 rounded-l-full text-[15px] bg-transparent">
+              <input type="number" placeholder="0" class="w-10/12 py-4 px-6 rounded-l-full text-[15px] bg-transparent text-white outline-none" disabled>
               <span class="flex items-center">
                 <p class="text-white">MTH</p>
                 <img src="images/xVmnSiMo_400x400.png" alt="" class="w-[25px]">
               </span>
             </div>
           </div>
-          <button class="bg-green-400 text-white relative z-[50] px-4 py-2 border border-solid border-transparent text-[20px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400 w-full mb-8" id="">Connect Wallet</button>
+          <button class="bg-green-400 text-white relative z-[50] px-4 py-2 border border-solid border-transparent text-[20px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400 w-full" id="">Connect Wallet</button>
+          <p class="mb-8 text-green-400 ml-6 italic">Please open in Dapps browser</p>
           <div class="flex gap-6 items-center justify-center mb-4">
             <button class="bg-green-400 text-white relative z-[50] px-4 py-2 border border-solid border-transparent text-[20px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400 w-full"><a href="how-to-buy.html">How to Buy</a></button>
-            <button class="bg-green-400 text-white relative z-[50] px-4 py-2 border border-solid border-transparent text-[20px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400 w-full"><a href="how-to-buy.html">Refer and Earn</a></button>
+            <button class="bg-green-400 text-white relative z-[50] px-4 py-2 border border-solid border-transparent text-[20px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400 w-full" id="openModal">Refer and Earn</button>
           </div>
         </div>
       </div>
 
       <!-- DEX CALCULATRO ENDS -->
-
-      <!-- REFER AND EARN MODAL -->
-      <div class=""></div>
-      <!-- REFER AND EARN MODAL ENDS -->
     </section>
+
+    <!-- REFER AND EARN MODAL -->
+    <div class="fixed w-full h-full top-0 right-0 left-0 bottom-0 flex items-center justify-center bg-[#00000040] z-[100] hidden" id="modal">
+      <div class="bg-slate-800 w-5/12 p-8 rounded-3xl border border-solid border-solid slate-400">
+        <h2 class="text-white mb-8 font-600 uppercase text-center text-[20px]">Referral and Earn</h2>
+        <p class="text-white text-[17px] mb-6">
+          Copy your referral link below and send it to your friends. For every purchase made using this link, you'll receive 5% of the purchase amount.
+          <br>
+          <br>
+          Referral link: <a href="#" class="underline text-green-400">Please connect wallet first.</a>
+        </p>
+        <div class="flex justify-center items-center gap-36">
+          <button class="bg-green-400 text-white relative z-[50] px-6 py-2 border border-solid border-transparent text-[15px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400" id="">Copy</button>
+          <button class="bg-green-400 text-white relative z-[50] px-6 py-2 border border-solid border-transparent text-[15px] rounded-full hover:text-green-400 hover:bg-transparent hover:border-green-400" id="closeModal">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <!-- REFER AND EARN MODAL ENDS -->
   
     <section class="grid grid-cols-3 gap-[6] w-10/12 m-auto pb-32 balance">
       <div class="flex flex-col items-center justify-center">
@@ -350,6 +365,15 @@
 
 
   <style>
+    /* Hide the number input arrows */
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+    input[type="number"] {
+        -moz-appearance: textfield; /* Firefox */
+    }
+
     @media(width <= 768px){
       .nav{
         display: none;
